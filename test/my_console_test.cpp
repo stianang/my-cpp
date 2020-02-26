@@ -1,10 +1,13 @@
 #include "../my_console.h"
+#include "../my_string.h"
 
 int main(int argc, char **argv)
 {
-    auto arguments = my::console::readArgumentsToMap(argc, argv);
+    std::map<std::string, std::string> arguments = my::console::readArgumentsToMap(argc, argv);
     my::console::print(arguments);
 
+    int age = my::string::toInt(arguments["-age"]);
+    std::cout << ++age << std::endl;
 
     my::console::printLine("Input letter 'c':");
     auto letter = my::console::readInputLine();
