@@ -24,11 +24,6 @@ namespace my::file
 
             std::optional<std::string> readLine()
             {
-                if (!readStream_.is_open())
-                {
-                    return {};
-                }
-                
                 std::string line;
                 std::getline(readStream_, line);
 
