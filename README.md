@@ -1,2 +1,2 @@
-# my-cpp
-The practical C++ library
+# wrapz
+C++ library for beginners - lookup common functions using intellisense.
